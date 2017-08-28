@@ -7,10 +7,10 @@ const port = parseInt((process.env.PORT || 1337), 10)
 const Player = require('./Player')
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.post('/', (req, res) => {
-  const {action, game_state} = req.body
+  const { action, game_state } = req.body
 
   switch (action) {
     case 'version':
